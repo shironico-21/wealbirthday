@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A little something for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style/main.css">
+</head>
+<body class="sealed">
+<div id="rain" aria-hidden="true"></div>
+<button id="music" class="music" aria-label="Toggle music" >♪<audio
+  id="audio"
+  loop
+  preload="auto"
+  src="assets/media/audio/background-music.mp3.mpeg">
+</audio></button>
+
+<!-- Stage 1: sealed envelope -->
+<section id="stage" class="stage">
+  <p class="invite">A little something for you…</p>
+  <div class="envelope" id="envelope">
+    <div class="paper-in"><span>Happy Birthday</span></div>
+    <div class="env-back"></div>
+    <div class="env-front"></div>
+    <div class="flap"></div>
+    <button class="seal" id="seal" aria-label="Open your letter"><span>✦</span></button>
+  </div>
+  <p class="hint">Tap the seal to open</p>
+</section>
+
+<!-- Stage 2: the continuous letter -->
+<main id="letter" class="letter" hidden>
+  <article class="page">
+    <h1 class="script">Happy Birthday, dear friend</h1>
+    <div id="letter-body" class="letter-body"></div>
+    <p class="signature script" id="signature"></p>
+  </article>
+
+  <section class="page dict">
+    <h2>A dictionary of us</h2>
+    <p class="sub">Tap an entry to turn to its page.</p>
+    <div id="memories" class="entries"></div>
+  </section>
+
+  <section class="page closing reveal">
+    <div class="ornament">❦</div>
+    <p id="closing"></p>
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-nav prev" aria-label="Previous">‹</button>
+  <figure class="lb-page" id="lb-page"></figure>
+  <button class="lb-nav next" aria-label="Next">›</button>
+</div>
+
+<div id="yt-player-wrap" style="position:fixed;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><div id="yt-player"></div></div>
+<audio id="audio" loop preload="auto" src="assets/media/audio/background-music.mp3"></audio>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
